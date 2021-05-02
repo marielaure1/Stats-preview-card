@@ -24,6 +24,9 @@ h1{
     font-family: Inter, sans-serif;
     font-weight: 400;
     color: hsla(0, 0%, 100%, 0.75);
+    font-size: 2vh;
+    margin: 0 5vh;
+    line-height: 3.5vh;
 }
 
 #stats-block{
@@ -33,14 +36,16 @@ h1{
 .stats{
     color: hsl(0, 0%, 100%);
     font-weight: 700;
+    font-size: 3.5vh;
 }
 
 .stats-heading{
     color: hsla(0, 0%, 100%, 0.6);
     font-weight: 400;
     text-transform: uppercase;
+    letter-spacing: 0.3vh;
+    font-size: 1.5vh;
 }
-
 
 /* PARTI PHOTO */
 #photo{
@@ -53,13 +58,17 @@ h1{
     height: 100%;
 }
 
-@media(min-width: 1441px){
-    body{
-        background-color: azure;
-        height: 100vh;
+@media(min-width: 769px){
+    #background{
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: hsl(233, 47%, 7%);
+    }
+
+    #content{
+        display: flex;
+        width: 75%;
     }
 
     #text{
@@ -78,22 +87,6 @@ h1{
         border-radius: 0 15px 15px 0;
     }
 
-    #background{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: hsl(233, 47%, 7%);
-        height: 70%;
-        width: 80%;
-    }
-
-    /* CONTENT */
-    #content{
-        display: flex;
-        height: 70%;
-        width: 75%;
-    }
-
     /* TEXT */
 
     h1{
@@ -101,87 +94,44 @@ h1{
         font-size: 3vh;
     }
 
-    #main-paragraph{
-        line-height: 3.5vh;
-        font-size: 2vh;
-        margin: 0 5vh;
-    }
-
     #stats-block{
+        display: flex;
+        justify-content: space-between;
         margin: 5vh 5vh 7vh;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .stats{
-        font-size: 3vh;
     }
 
-    .stats-heading{
-        font-size: 1vh;
-        letter-spacing: 0.3vh;
+    @media(min-width: 1441px){
+        body{
+            background-color: azure;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #background{
+            height: 70%;
+            width: 80%;
+        }
+        
+        /* CONTENT */
+        #content{
+            height: 70%;
+        }
+    }
+    
+    @media(min-width: 769px) and (max-width: 1440px){
+        #background{
+            height: 100vh;
+        }
+        
+        /* CONTENT */
+        #content{
+            height: 60%;
+        }
     }
 }
 
-@media(min-width: 769px) and (max-width: 1440px){
-    #background{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: hsl(233, 47%, 7%);
-        height: 100vh;
-    }
-    
-    #text{
-        border-radius: 15px 0 0 15px;
-        height: 100%;
-        width: 50%;
-    }
-
-    #photo{
-        border-radius: 0 15px 15px 0;
-        height: 100%;
-        width: 50%;
-    }
-    
-    #bg-purple{
-        border-radius: 0 15px 15px 0;
-    }
-    /* CONTENT */
-    #content{
-        display: flex;
-        height: 60%;
-        width: 75%;
-    }
-
-    /* TEXT */
-
-    h1{
-        margin: 5vh;
-        font-size: 3vh;
-    }
-
-    #main-paragraph{
-        line-height: 4vh;
-        font-size: 2vh;
-        margin: 0 5vh;
-    }
-
-    #stats-block{
-        margin: 8vh 5vh 5vh;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .stats{
-        font-size: 3.5vh;
-    }
-
-    .stats-heading{
-        font-size: 1.5vh;
-        letter-spacing: 0.3vh;
-    }
-}
 
 @media(max-width: 768px){
     body{
@@ -231,22 +181,7 @@ h1{
         font-size: 3vh;
     }
 
-    #main-paragraph{
-        line-height: 3vh;
-        font-size: 1.8vh;
-        margin: 0 3vh;
-    }
-
     #stats-block{
         margin: 5vh 0 7vh 0;
-    }
-
-    .stats{
-        font-size: 3.5vh;
-    }
-
-    .stats-heading{
-        font-size: 1.5vh;
-        letter-spacing: 0.3vh;
     }
 }
